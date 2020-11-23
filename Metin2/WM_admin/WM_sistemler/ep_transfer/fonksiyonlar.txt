@@ -1,0 +1,1 @@
+eptransfer_sistem_statu,eptransfer_sistem_yukle,eptransfer_sistem_kaldir

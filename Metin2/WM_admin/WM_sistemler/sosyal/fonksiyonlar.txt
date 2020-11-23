@@ -1,0 +1,1 @@
+karakter_sosyal_statu,karakter_sosyal_yukle,karakter_sosyal_kaldir

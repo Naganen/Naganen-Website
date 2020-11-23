@@ -1,0 +1,1 @@
+davet_statu_kontrol,davet_sistem_yukle,davet_sistem_kaldir

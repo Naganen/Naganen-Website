@@ -1,0 +1,1 @@
+bakiye_statu_kontrol,bakiye_sistem_yukle,bakiye_sistem_kaldir

@@ -1,0 +1,41 @@
+.label {
+    display: inline;
+    padding: 2px 7px;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.label-turuncu {
+    background-color: #f0ad4e;
+}
+.label-kirmizi {
+    background-color: #d9534f;
+}
+.label-yesil {
+    background-color: #5cb85c;
+}
+.label-kapalimavi {
+    background-color: #5bc0de;
+}
+.label-acikmavi {
+    background-color: #337ab7;
+}
+.label-beyaz {
+    background-color: #777;
+}
+.label-sari {
+    background-color: #f1c40f;
+}
+.label-siyah {
+    background-color: #000;
+}
+
+label {
+    cursor: default;
+}
