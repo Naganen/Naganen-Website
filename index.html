@@ -44,17 +44,76 @@
 					<div class="year-tit year-znqf-tit"></div>
 					<div class="znqf-box">
 						<div class="znqf-btn znqf-one"><a href="anasayfalink" target="_self" ></a></div>
-						<button class="znqf-btn znqf-one" id="myBtn"></button>
-								<div id="myModal" class="modal">
-									<div class="modal-content">
-									<span class="close">&times;</span>
-									<p>Some text in the Modal..</p>
-								</div>
+						<div class="znqf-btn znqf-two"><a target="_self" id="myBtn"></a></div>
+						
+							<div id="myModal" class="modal">
+							<div class="modal-content">
+								<span class="close">&times;</span>
+								<iframe src="kayit.php"></iframe>
+							</div>
 						</div>
 						<div class="znqf-btn znqf-three"><a href="indirmelink" target="_self" ></a></div>
 						<div class="znqf-btn znqf-four"><a href="tanıtımlink" target="_self" ></a></div>
 						<div class="znqf-btn znqf-five"><a href="wikilink" target="_self" ></a></div>
 					</div>
-	
+	<style>
+	/* Popup (arka plan) */
+.modal {
+    display: none; /* Varsayılan olarak gizlidir */
+    position: fixed; /* Yerinde kal */
+    z-index: 1; /* Üstte */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ful Genişlik */
+    height: 100%; /* Ful Yükseklik */
+    overflow: auto; /* Gerekirse kaydırmayı etkinleştir */
+    background-color: rgb(0,0,0); /* Yedek renk */
+    background-color: rgba(0,0,0,0.4); /* Siyah w / opaklık */
+}
+/* İçerik / Kutu */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* % 15 üstten ve ortalanmış */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ekran boyutuna bağlı olarak daha fazla veya daha az olabilir */
+}
+/* Kapat Düğmesi */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+	</style>
+	<script>
+	// Popup Al
+var modal = document.getElementById('myModal');
+// Kipi açan düğmeyi al
+var btn = document.getElementById("myBtn");
+// Kipi kapatan <span> öğesini edinin
+var span = document.getElementsByClassName("close")[0];
+// Kullanıcı düğmeyi tıklattığında
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+// Kullanıcı <span> (x) düğmesini tıkladığında, popup
+span.onclick = function() {
+    modal.style.display = "none";
+}
+// Kullanıcı modelden başka herhangi bir yeri tıklattıysa, onu kapatın.
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+	</script>
 </body> 
 </html>
