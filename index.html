@@ -1,188 +1,59 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
 <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Metin2 - Doğuya Has Macera</title>
-        <meta name="keywords" content="Metin2,metin2pvp,pvpserver,emekserver,ortaserver," />
-        <meta name="description" content="Metin2 Efsanesi Geri Geliyor" />
-		<link href="css/style.css" rel="stylesheet" type="text/css" />
-		<base target="_blank">
-		<script type="text/javascript">
-		</script>
-		<style>
-	</style>
-    </head>
-    <body>
-		<div class="wrap">
-			<div class="flash-index">
-				<video poster="images/normarkaplan.jpg" autoplay muted loop class="vidbacking">
-					<source src="images/hareketmp4arka.mp4" type="video/mp4">
-				</video>
-			</div>
 
-				<div class="logo2">
-					<a style="display:none;" href="javascript:void(0);" id="media"><img style="height:80px;margin-bottom: 10px;" src="#"></a>
-				</div>
-				<div class="rt-nav">
-					<a href="anasayfalink" class="nav-home">Ana Sayfa</a>
-					<a href="indirmelink" class="nav-d">İndir</a>
-				</div>
-				<div class="nav goHref">
 
-					<p><a href="anasayfalink"  target="_self">Ana Sayfa</a></p>
-					<p><a href="kayıtlink" target="_self">Kayıt Ol</a></p>
-					<p><a href="indirmelink"  target="_self">Oyunu İndir</a></p>
-					<p><a href="tanıtımlink"  target="_self">Tanıtım Sayfası</a></p>
-					<p class="on"><a href="wikilink"  target="_self">Wiki</a></p>
-					<p><a href="facebooklink"  target="_self">Facebook Sayfası</a></p>
-				</div>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<title>Naganen</title>
+</head>
 
-				<div class="main">
-					<div class="year-tit year-znqf-tit"></div>
-					<div class="znqf-box">
-						<div class="znqf-btn znqf-one"><a href="anasayfalink" target="_self" ></a></div>
-						<div class="znqf-btn znqf-two"><a target="_self" id="myBtn"></a></div>
-						
-							<div id="myModal" class="modal">
-							<div class="modal-content">
-								<span class="close">&times;</span>
-								<?PHP
-	require ('config/config.inc.php');
+<body>
 	
-	if(isset($_POST['register'])) {	
-		
-		if(empty($_POST['benutzername']) && empty($_POST['passwort']) && empty($_POST['email']) && empty($_POST['renk'])) {
-			echo '<p>Tüm alanların doldurulması zorunludur!</p>';
-		}
-		elseif(preg_match('/^a-zA-Z0-9@-._ÖöÄäÜüÇç/', $_POST['benutzername']) && preg_match('/^a-zA-Z0-9@-._ÖöÄäÜüÇç/', $_POST['passwort']) &&
-				preg_match('/^a-zA-Z0-9@-._ÖöÄäÜüÇç/', $_POST['email']) && preg_match('/^a-zA-Z0-9@-._ÖöÄäÜüÇç/', $_POST['renk'])) {
-			echo '<p>Yanlızca bu karakterlere: a-Z,0-9,@,.,_,- izin vardır!</p>';
-		}
-		else {
-			$benutzername = mysqli_real_escape_string($con, $_POST['benutzername']);
-			$passwort = mysqli_real_escape_string($con, $_POST['passwort']);
-			$email = mysqli_real_escape_string($con, $_POST['email']);
-			$antwort = mysqli_real_escape_string($con, $_POST['renk']);
-		}
-		
-		$sql = "INSERT INTO account.account
-				(login, password, social_id, email, create_time, question1, answer1, status, safebox_expire, autoloot_expire, coins)
-				VALUES
-				('" . $benutzername . "', PASSWORD('" . $passwort . "'), '" . $loeschcode . "', '" . $email . "', '" . $zeit . "', '" . $frage . "',
-				'" . $antwort . "', '" . $status . "', '" . $date . "', '" . $date . "', '" . $registercoins . "')";
-		$qry = mysqli_query($con, $sql);
+<div class="background">
 	
-		if($qry) {
-			echo '<p id="nachricht" style="color:green;">Hesap Başarıyla Oluşturuldu!</p>';
-		}
-		else {
-			echo '<p id="nachricht" style="color:red;">Kayıt Başarısız!Eksiksiz bir şekilde tekrar deneyiniz..</p>';
-		}
-	}
-?>
-<html>
-		<head>
-			<title><?PHP echo $servername ?></title>
-			<meta http-equiv="content-type" content="text/html; charset=utf-8">
-			<link rel="stylesheet" href="layout/design.css" type="text/css" />
-		</head>
-	<body>
-	<style type="text/css">
-		body { background: url('<?php echo $url ?>') center fixed;	background-size: cover;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover; }
-	</style>
-		<div id="logo"></div>
-			<div id="box">
-			<form action="index.html" method="post" id="login">
-				<center>
-					<p>Kullanıcı Adı</p>
-					<input type="text" name="benutzername" maxlength="16" />
+<div class="text">
 
-					<p>Şifre</p>
-					<input type="password" name="passwort" maxlength="16" />
-
-					<p>Email</p>
-					<input type="text" name="email" maxlength="20" />
-
-					<p>Güvenlik Sorusu: Favori Renk</p>
-					<input type="text" name="renk" maxlength="8" />
-					
-					<input type="submit" name="register" value="" />
-				</center>
-			</form>
-		</div>
-		<div id="footer">
-			<p>© Copyright <?PHP echo $servername ?>. Tum hakları saklıdır.</p>
-			<p>Coded by: Fydes</a>
-		</div>
-	</body>
-</html>
-							</div>
-						</div>
-						<div class="znqf-btn znqf-three"><a href="indirmelink" target="_self" ></a></div>
-						<div class="znqf-btn znqf-four"><a href="tanıtımlink" target="_self" ></a></div>
-						<div class="znqf-btn znqf-five"><a href="wikilink" target="_self" ></a></div>
-					</div>
-	<style>
-	/* Popup (arka plan) */
-.modal {
-    display: none; /* Varsayılan olarak gizlidir */
-    position: fixed; /* Yerinde kal */
-    z-index: 1; /* Üstte */
-    left: 0;
-    top: 0;
-    width: 100%; /* Ful Genişlik */
-    height: 100%; /* Ful Yükseklik */
-    overflow: auto; /* Gerekirse kaydırmayı etkinleştir */
-    background-color: rgb(0,0,0); /* Yedek renk */
-    background-color: rgba(0,0,0,0.4); /* Siyah w / opaklık */
-}
-/* İçerik / Kutu */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* % 15 üstten ve ortalanmış */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Ekran boyutuna bağlı olarak daha fazla veya daha az olabilir */
-}
-/* Kapat Düğmesi */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+	
+	<img height="200px" src="https://i.hizliresim.com/MMPvtt.png"/>
+	<h1>Welcome to My Website</h1><br>
+	You can find my projects and other websites here.<br>
+	<br>
+	<br>
+	
+	<br>
+	If you want more information about me, follow my social media accounts 😜<br>
+	<br>
+	<br>
+	
+	
+	
+	
+	</div>
+</div>
+<style>
+.sosyal {
+	width: 40%;
 }
 
-	</style>
-	<script>
-	// Popup Al
-var modal = document.getElementById('myModal');
-// Kipi açan düğmeyi al
-var btn = document.getElementById("myBtn");
-// Kipi kapatan <span> öğesini edinin
-var span = document.getElementsByClassName("close")[0];
-// Kullanıcı düğmeyi tıklattığında
-btn.onclick = function() {
-    modal.style.display = "block";
+.sosyalmedya {
+	margin: center;
+	padding-left: 30%;
+	padding-right: 30%;
 }
-// Kullanıcı <span> (x) düğmesini tıkladığında, popup
-span.onclick = function() {
-    modal.style.display = "none";
-}
-// Kullanıcı modelden başka herhangi bir yeri tıklattıysa, onu kapatın.
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-	</script>
-</body> 
+</style>
+
+<div style="sosyalmedya">
+<ul class="sosyal">
+<li><a class="face" href="https://www.facebook.com/NaganenTR/"><i class="fa fa-facebook"></i></a></li>
+<li><a class="twit" href="https://twitter.com/NaganenTR"><i class="fa fa-twitter"></i></a></li>
+<li><a class="yutup" href="https://www.youtube.com/c/naganen"><i class="fa fa-youtube"></i></a></li>
+<li><a class="insta" href="https://www.instagram.com/naganentr"><i class="fa fa-instagram"></i></a></li>
+<li><a class="steamke" href="https://steamcommunity.com/id/naganen/"><i class="fa fa-steam"></i></a></li>
+<li><a class="tiwic" href="https://www.twitch.tv/naganen"><i class="fa fa-twitch"></i></a></li>
+</ul>
+</div>
+</body>
 </html>
