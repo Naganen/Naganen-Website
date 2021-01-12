@@ -17,7 +17,7 @@ body, html {
 	font-weight: 600;
 	color: $black;
  	text-align: center;
-	color: #fff;
+	color: #000;
  	margin: auto;
  	width: 50%;
 
@@ -42,13 +42,13 @@ ul {
 
 	
 .face {
-   color: #000;
+   color: #fff;
         border: none;
         padding: 10px 20px;
         display: inline-block;
         text-decoration: none;
         font: bold 18px sans-serif;
-        background: #fff;
+        background: #000;
 	 	-moz-border-radius: 100px; 
    		-webkit-border-radius: 100px; 
    		border-radius: 100px;
@@ -57,20 +57,20 @@ ul {
 .face:hover {
   box-shadow: 0 5px 15px 0px rgba(0,0,0,5);
 	 background: #4444ff;
-	color: #fff;
+	color: #000;
 }
 
 
 
 
 .twit {
-color: #000;
+color: #fff;
         border: none;
         padding: 10px 20px;
         display: inline-block;
         text-decoration: none;
         font: bold 18px sans-serif;
-        background: #fff;
+        background: #000;
 	 	-moz-border-radius: 100px; 
    		-webkit-border-radius: 100px; 
    		border-radius: 100px;
@@ -79,19 +79,19 @@ color: #000;
 .twit:hover {
     box-shadow: 0 5px 15px 0px rgba(0,0,0,5);
 	 background: #1DA1F2;
-	color: #fff;
+	color: #000;
 }
 
 
 
 .yutup {
-color: #000;
+color: #fff;
         border: none;
         padding: 10px 20px;
         display: inline-block;
         text-decoration: none;
         font: bold 18px sans-serif;
-        background: #fff;
+        background: #000;
 	 	-moz-border-radius: 100px; 
    		-webkit-border-radius: 100px; 
    		border-radius: 100px;
@@ -100,19 +100,19 @@ color: #000;
 .yutup:hover {
    box-shadow: 0 5px 15px 0px rgba(0,0,0,5);
 	 background: #FF0000;
-	color: #fff;
+	color: #000;
 }
 
 
 
 .insta {
-color: #000;
+color: #fff;
         border: none;
         padding: 10px 20px;
         display: inline-block;
         text-decoration: none;
         font: bold 18px sans-serif;
-        background: #fff;
+        background: #000;
 	 	-moz-border-radius: 100px; 
    		-webkit-border-radius: 100px; 
    		border-radius: 100px;
@@ -122,18 +122,18 @@ color: #000;
     box-shadow: 0 5px 15px 0px rgba(0,0,0,5);
 	 background: rgb(131,58,180);
 background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-	color: #fff;
+	color: #000;
 }
 
 
 .steamke {
-color: #000;
+color: #fff;
         border: none;
         padding: 10px 20px;
         display: inline-block;
         text-decoration: none;
         font: bold 18px sans-serif;
-        background: #fff;
+        background: #000;
 	 	-moz-border-radius: 100px; 
    		-webkit-border-radius: 100px; 
    		border-radius: 100px;
@@ -142,17 +142,17 @@ color: #000;
 .steamke:hover {
     box-shadow: 0 5px 15px 0px rgba(0,0,0,5);
 	 background: #171a21;
-	color: #fff;
+	color: #000;
 }
 
 .tiwic {
-color: #000;
+color: #fff;
         border: none;
         padding: 10px 20px;
         display: inline-block;
         text-decoration: none;
         font: bold 18px sans-serif;
-        background: #fff;
+        background: #000;
 	 	-moz-border-radius: 100px; 
    		-webkit-border-radius: 100px; 
    		border-radius: 100px;
@@ -161,7 +161,7 @@ color: #000;
 .tiwic:hover {
     box-shadow: 0 5px 15px 0px rgba(0,0,0,5);
 	 background: #6441A4;
-	color: #fff;
+	color: #000;
 }
 
 
